@@ -24,3 +24,26 @@ function displayProductDetails(i) {
 console.log("Product Information List:");
 
 inventory.forEach(displayProductDetails);
+
+
+
+//Task 3: Create a Function to Update Product Stock After Sales
+
+let unitsSold = 15
+
+function updateStock(i,unitsSold) {
+    i.quantity =- unitsSold
+
+    // check if the current stock is out of stock or low stock
+    if (i.quantity <= 0) {
+        return(`${i.name} is out of stock!!!`);
+    } else if (i.quantity <= i.lowStockLevel) {
+        return(`${i.name} is running low on stock!!!`);
+    }
+}
+
+// displaying the updateStock function results for each product in the inventory array
+console.log("Update of product stock after sales:")
+
+inventory.forEach((updateStock) =>
+    console.log(updateStock));
