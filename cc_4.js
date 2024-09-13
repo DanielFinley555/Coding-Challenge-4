@@ -4,7 +4,7 @@ const inventory = [
     { name: "Guitar", price: 250, quantity: 90, lowStockLevel: 10 },
     { name: "Piano", price: 2400, quantity: 20, lowStockLevel: 5 },
     { name: "Drum Set", price: 800, quantity: 15, lowStockLevel: 3 },
-    { name: "Violin", price: 1000, quantity: 100, lowStockLevel: 10 },
+    { name: "Violin", price: 1000, quantity: 9, lowStockLevel: 10 },
     { name: "Saxophone", price: 750, quantity: 40, lowStockLevel: 8 }
 ];
 
@@ -47,3 +47,18 @@ console.log("Update of product stock after sales:")
 
 inventory.forEach((updateStock) =>
     console.log(updateStock));
+
+//Task 4: Create a Function to Check Low Stock Products
+
+function checkLowStock(i) {
+    if (i.quantity < i.lowStockLevel) {
+        return (`${i.name} is low on stock`);
+    }
+}
+
+// displaying the checkLowStock function
+console.log("Instrument that are low on stock:")
+
+    inventory.forEach((checkLowStock) =>
+        console.log(checkLowStock));
+    
