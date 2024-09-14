@@ -48,6 +48,8 @@ console.log("Update of product stock after sales:")
 inventory.forEach((updateStock) =>
     console.log(updateStock));
 
+
+
 //Task 4: Create a Function to Check Low Stock Products
 
 function checkLowStock(i) {
@@ -67,5 +69,17 @@ console.log("Instrument that are low on stock:")
 //Task 5: Create a Function to Calculate Total Inventory Value
 
 function calculateInventoryValue (inventory) {
-    let totalValue = inventory.reduce(i.price * i.quantity)
+    let totalValue = inventory.reduce(i.price * i.quantity);
+}
+
+
+
+//Task 6: Create a Function to Process a Sale
+
+function processSale(name,unitsSold) {
+    if (i.name) {
+        return updateStock(i.name);
+    } else {
+        return `${i.name} is not in the inventory}`
+    }
 }
