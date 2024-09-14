@@ -61,4 +61,11 @@ console.log("Instrument that are low on stock:")
 
     inventory.forEach((checkLowStock) =>
         console.log(checkLowStock));
-    
+
+
+
+//Task 5: Create a Function to Calculate Total Inventory Value
+
+function calculateInventoryValue (inventory) {
+    let totalValue = inventory.reduce(i.price * i.quantity)
+}
